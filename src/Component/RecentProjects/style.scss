@@ -1,0 +1,134 @@
+.Recent-projects-section{
+    background: #1B1B1B;
+    padding:150px 0 100px;
+    color:#fff;
+    position: relative;
+    overflow: hidden;
+    .title{
+        h2{
+            position: relative;
+            padding-top: 10px;
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 40px;
+                height: 5px;
+                background: #8ed61d;   
+            }
+        }
+        hr{
+            color: #8ED61D;
+            opacity: 1;
+        }
+        h5{
+            color: #8ED61D;
+        }
+        p{
+            padding-top:10px;
+            margin:0;
+            line-height: 30px;
+        }
+        .btn3{
+            margin-top: 30px;
+            a{    
+                color: #000;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+               
+            } 
+            &:hover{
+                a{
+                    color:#fff!important;
+                    svg{
+                        path{
+                            fill:#fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .img-project{
+        img{
+            position: absolute;
+            bottom:0;
+            right:0;
+            z-index:1;
+            width:45vw;
+            height:700px;
+            object-fit: cover;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            right: 0;
+            top:5%;
+            width: 200px;
+            height: 200px;
+            z-index:0;
+            background: #8ed61d;   
+        }
+    }
+}
+
+
+@media (min-width:992px) and (max-width:1380px){
+    .Recent-projects-section{
+        padding:50px 0;
+        .img-project{
+            img{
+                width:45%;
+                height:90dvh;
+                object-fit: cover;
+                bottom:0%!important;
+                right:0;
+            }
+
+            &::after{
+                top:10%;
+            }
+        }
+    }
+}
+
+@media (min-width:580px) and (max-width:991px){
+    .Recent-projects-section{
+        padding:50px 0;
+        .img-project{
+            img{
+                position: relative;
+                width:100%;
+                height:450px;
+                object-fit: cover;
+                padding:30px 0;
+            }
+
+            &::after{
+                display: none;
+            }
+        }
+    } 
+}
+
+
+@media (min-width:320px) and (max-width:579px){
+    .Recent-projects-section{
+        padding:50px 0;
+        .img-project{
+            img{
+                position: relative;
+                width:100%;
+                height:100%;
+                object-fit: cover;
+                padding:30px 0;
+            }
+            &::after{
+                display: none;
+            }
+        }
+    } 
+}

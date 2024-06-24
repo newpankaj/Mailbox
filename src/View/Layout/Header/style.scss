@@ -1,0 +1,208 @@
+header{
+    position: absolute;
+    top:0;
+    width: 100%;
+    z-index:9;
+    .topbar{
+        padding:20px 0;
+        max-width: 90%;        
+        span{
+            text-transform: capitalize;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #8ed61d;
+            a{
+                color:#fff;
+                text-decoration: none;
+            }
+        }
+        .mail{
+            display:flex;
+            align-items: center;
+            justify-content: end;
+            gap:15px;
+            a{
+                color:#fff;
+                text-decoration: none;
+            }
+        }
+    }
+    hr{
+        margin:0;
+        color:#fff;
+    }
+    .mainbar{
+        max-width: 90%;
+        padding:25px 0;
+        .menu{
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                gap:30px;
+                list-style: none;
+                font-size: 17px;
+                .active{    
+                    &::after{
+                        transform: skew(15deg)!important;
+                        opacity: 1!important;
+                    }
+                }
+                .page-link{
+                    a{
+                        color:#fff;
+                        text-decoration: none;                     
+                    }                    
+                    position: relative;
+                    z-index: 1;
+                    padding:2.5px 15px;
+                    &::after{
+                        content:'';
+                        position: absolute;
+                        background-color: #8ed61d;
+                        width:100%;
+                        height:100%;
+                        top:0;
+                        left:0;
+                        transform: skew(0deg);
+                        z-index: -1;
+                        opacity: 0;
+                    }
+                    &:hover{
+                        &::after{
+                            opacity: 1;
+                            transform: skew(15deg);
+                            transition: 200ms ease-in-out;
+                        }
+                    }
+                }                
+            }
+            .btn{
+                width:180px!important;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.blackheader{
+    .topbar{       
+        span{
+            a{
+                color:#000;
+            }
+        }
+        .mail{
+            a{
+                color:#000;
+            }
+        }
+    }
+    hr{
+        color:#000;
+    }
+    .mainbar{
+        .menu{
+            ul{
+                .page-link{
+                    a{
+                        color:#000;                    
+                    } 
+                }                
+            }
+        }
+    }
+}
+
+.mobilemainbar{
+    display: none;
+}
+
+.mobilemenu{
+    display: block;
+    position: fixed;
+    top:0;
+    left:-100%;
+    transition: 0.7s ease-in-out;
+    z-index: 9;
+    width:100%;
+    height:100%;
+    padding:50px 25px;
+    background: #fff;
+    ul{
+        list-style: none;
+        padding:0;
+        li{
+            padding-bottom: 30px;
+            font-size: 18px;
+            
+        }
+        .page-link{
+            a{
+                color:#000!important;
+                text-decoration: none!important;
+            }
+        }
+        button{
+            font-size: 19px!important;
+        }
+    }
+}
+
+
+@media (min-width:1550px){
+    .topbar{
+        max-width: 1320px!important;
+    }
+}
+
+
+@media (min-width:1025px) and (max-width:1320px){
+    header{
+        #logo{
+            width:13vw!important;
+        }
+        .mainbar{
+            .menu{
+                ul{
+                    gap:5%;
+                }
+            }
+        }
+    }
+}
+@media (max-width:1024px){
+    header{
+        .topbar,.mainbar{
+            display: none;
+        }
+        background: #000;
+        .mobilemainbar{
+            display:block;
+            padding:20px 10px;
+            img{
+                width:18vw;
+            }
+        }
+        .menubtn{
+            background: transparent;
+            border:none;
+            div{
+                width:40px;
+                height:2px;
+                border-radius: 100px;
+                background: #fff;
+                margin:5px 0;
+            }
+        }
+    }
+    
+    .mobilemenu{
+        left:0;
+        transition: 500ms ease-in-out;
+        #closebtn{
+            position: absolute;
+            top:2.5%;
+            right:5%;
+        }
+    }
+}

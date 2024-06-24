@@ -1,0 +1,31 @@
+.about-section{
+    padding:100px 0;
+    .title{
+        border-left:5px solid #8ed61d;
+        margin-bottom:40px;
+        h2{
+            padding:5px 20px;
+            font-weight: 700;
+            line-height: 40px;
+        }
+    }
+    p{
+        font-size: 18px;
+    }
+    #aboutimg{
+        padding:10px 0;
+        width:100%;
+    }
+}
+
+
+@media (max-width:'480px') {
+    .about-section{
+        padding:50px 0;
+        #aboutimg{
+            padding-top:40px;
+            width:100%!important;
+        }
+    }
+    
+}

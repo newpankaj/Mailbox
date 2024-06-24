@@ -1,0 +1,27 @@
+.videos-section{
+    padding:100px 0;
+    .video-wrapper{
+        width:100%;
+        min-height:350px;
+    }
+}
+
+.pagination{
+    gap:10px!important;
+    padding-bottom: 30px;
+    li{
+        box-shadow: 0 0 10px #00000010;
+        border:1px solid #efefef;
+        padding: 5px 9px;
+        font-size: 18px;
+        a{
+            color:#727272!important;
+        }
+    }
+    .active{
+        background: #8ed61d;
+        a{
+            color: #fff!important;
+        }
+    }
+}

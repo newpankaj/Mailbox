@@ -1,0 +1,176 @@
+footer{
+    background: #000;
+    padding:60px 0 0;
+    position: relative;
+    z-index: 9999;
+    // .container{
+    //     max-width: 90%;
+    // }
+
+    .poweredby{
+        a{
+            &:hover{
+                color:#9eee1e!important;
+            }
+        }
+    }
+    .main-footer{
+        padding-bottom:40px;
+        .disclosure{
+            text-align: center;
+            color:#fff;
+            font-size: 1rem;
+            font-weight: 500;
+            padding-top:40px ;
+        }
+        .logo{
+            img{
+                width:200px;
+            }
+        }
+        .menu{
+            ul{
+                display: flex;
+                list-style: none;
+                gap:30px;
+                font-size: 17px;
+                a{
+                    color:#fff;
+                    text-decoration: none;
+                }
+            }
+        }        
+        .linkedin{
+            display: flex;
+            justify-content: center;
+            img{
+                width:2rem;
+            }
+        }
+    }
+    
+    .copyright{
+        padding:30px 0;
+        border-top:1px solid #fff;
+        // text-align: center;        
+        color:#fff;
+    }
+}
+
+
+@media (min-width:481px) and (max-width:768px){
+    footer{
+        background: #000;
+        padding:60px 0 0;    
+        .container{
+            max-width: 90%;
+        }
+        .main-footer{
+            padding-bottom:40px;
+            .disclosure{
+                text-align: center;
+                color:#fff;
+                font-size: 1rem;
+                font-weight: 500;
+                padding-bottom:40px ;
+            }
+            .logo{
+                text-align: center;
+                img{
+                    width:200px;
+                }
+            }
+            .menu-wrapper{
+                align-items: baseline!important;
+                justify-content: start!important;
+            } 
+            .menu{
+                margin: 0px 0;
+                ul{
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    list-style: none;
+                    gap:30px;
+                    color:#fff;
+                    font-size: 17px;
+                    padding: 0;
+                }
+            }
+            
+            .linkedin{
+                display: flex;
+                align-items: baseline;
+                justify-content: start;
+                img{
+                    width:2rem;
+                }
+            }
+        }
+        
+        .copyright{
+            padding:30px 0;
+            border-top:1px solid #fff;
+            text-align: center;        
+            color:#fff;
+        }
+    }  
+}
+
+
+@media (max-width:480px){
+    footer{
+        background: #000;
+        padding:60px 0 0;
+    
+        .container{
+            max-width: 90%;
+        }
+        .main-footer{
+            padding-bottom:40px;
+            .disclosure{
+                text-align: center;
+                color:#fff;
+                font-size: 1rem;
+                font-weight: 500;
+                padding-bottom:40px ;
+            }
+            .logo{
+                img{
+                    width:100px;
+                }
+            }
+            .menu-wrapper{
+                align-items: baseline!important;
+                justify-content: start!important;
+            } 
+            .menu{
+                margin: 0px 0;
+                ul{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    list-style: none;
+                    gap:30px;
+                    color:#fff;
+                    font-size: 17px;
+                    padding: 0;
+                }
+            }
+            
+            .linkedin{
+                display: flex;
+                justify-content: start;
+                align-items: baseline;
+                img{
+                    width:2rem;
+                }
+            }
+        }
+        
+        .copyright{
+            padding:30px 0;
+            border-top:1px solid #fff;
+            text-align: center;        
+            color:#fff;
+        }
+    }  
+}
